@@ -1,11 +1,11 @@
 Gra w Blackjack z interfejsem webowym, zaimplementowana w Pythonie z FastAPI.
 
 Funkcjonalności
-Aplikacja webowa - gra w przeglądarce
-REST API - operacje CRUD dla graczy i gier
-WebSocket - status serwera w czasie rzeczywistym (JSON)
-Baza Danych - SQLite z SQLAlchemy ORM
-Testy jednostkowe - pytest
+- Aplikacja webowa - gra w przeglądarce
+- REST API - operacje CRUD dla graczy i gier
+- WebSocket - status serwera w czasie rzeczywistym (JSON)
+- Baza Danych - SQLite z SQLAlchemy ORM
+- Testy jednostkowe - pytest
 
 Wymagania
 
@@ -13,10 +13,10 @@ Wymagania
 
 Instalacja
 
-cd blackjack
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
+- cd blackjack
+- python -m venv venv
+- venv\Scripts\activate
+- pip install -r requirements.txt
 
 Uruchomienie
 
