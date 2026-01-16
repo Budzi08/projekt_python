@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Blackjack</h1>
+            <div id="server-status" class="status">
+                <span class="status-dot"></span>
+                <span id="status-text">Łączenie...</span>
+            </div>
+        </header>
+
+        <div id="login-screen" class="screen">
+            <div class="card">
+                <h2>Wybierz gracza</h2>
+                
+                <div class="tabs">
+                    <button class="tab active" onclick="showTab('login')">Istniejący gracz</button>
+                    <button class="tab" onclick="showTab('register')">Nowy gracz</button>
+                </div>
+
+                <div id="login-tab" class="tab-content active">
+                    <select id="player-select">
+                        <option value="">-- Wybierz gracza --</option>
+                    </select>
+                    <button onclick="selectPlayer()" class="btn btn-primary">Graj</button>
+                </div>
+
+                <div id="register-tab" class="tab-content">
+                    <input type="text" id="new-username" placeholder="Nazwa użytkownika" maxlength="50">
+                    <button onclick="createPlayer()" class="btn btn-primary">Utwórz i graj</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="game-screen" class="screen hidden">
+            <div class="player-info">
+                <span id="player-name">Gracz</span>
+                <span id="player-balance">$1000</span>
+                <span id="player-stats">0 wygranych / 0 gier</span>
+                <button onclick="logout()" class="btn btn-small">Wyloguj</button>
+            </div>
+
+            <div class="game-table">
+                <div class="dealer-section">
+                    <h3>Krupier <span id="dealer-score"></span></h3>
+                    <div id="dealer-cards" class="cards"></div>
+                </div>
+
+                <div id="game-result" class="game-result hidden"></div>
+
+                <div class="player-section">
+                    <h3>Twoje karty <span id="player-score"></span></h3>
+                    <div id="player-cards" class="cards"></div>
+                </div>
+            </div>
+
+            <div id="bet-panel" class="controls">
+                <h3>Postaw zakład</h3>
+                <div class="bet-buttons">
+                    <button onclick="setBet(10)" class="btn btn-bet">$10</button>
+                    <button onclick="setBet(25)" class="btn btn-bet">$25</button>
+                    <button onclick="setBet(50)" class="btn btn-bet">$50</button>
+                    <button onclick="setBet(100)" class="btn btn-bet">$100</button>
+                </div>
+                <div class="custom-bet">
+                    <input type="number" id="custom-bet" placeholder="Inna kwota" min="1">
+                    <button onclick="startGame()" class="btn btn-primary">Rozdaj!</button>
+                </div>
+            </div>
+
+            <div id="action-panel" class="controls hidden">
+                <button onclick="hit()" class="btn btn-action btn-hit">Hit</button>
+                <button onclick="stand()" class="btn btn-action btn-stand">Stand</button>
+            </div>
+
+            <div id="newgame-panel" class="controls hidden">
+                <button onclick="showBetPanel()" class="btn btn-primary btn-large">Zagraj ponownie</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

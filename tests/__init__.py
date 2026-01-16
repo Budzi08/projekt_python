@@ -1,0 +1,3 @@
+"""
+Moduł inicjalizacyjny dla testów.
+"""

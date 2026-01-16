@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #228B22;
+    color: white;
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+}
+
+.status-dot.online {
+    background: lime;
+}
+
+.hidden { display: none; }
+
+.card {
+    background: rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.tabs { margin-bottom: 15px; }
+
+.tab {
+    padding: 8px 15px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+.tab.active { background: rgba(255,255,255,0.2); }
+
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.btn-primary { background: gold; color: black; }
+.btn-small { padding: 5px 10px; background: #555; color: white; }
+.btn-hit { background: green; color: white; }
+.btn-stand { background: darkred; color: white; }
+
+.player-info {
+    background: rgba(0,0,0,0.2);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.game-table {
+    background: rgba(0,0,0,0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 10px 0;
+    min-height: 80px;
+}
+
+.playing-card {
+    width: 50px;
+    height: 70px;
+    background: white;
+    color: black;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.playing-card.hearts, .playing-card.diamonds { color: red; }
+.playing-card.hidden-card { background: navy; color: white; }
+
+.game-result {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-size: 1.2em;
+}
+
+.game-result.win { background: green; }
+.game-result.lose { background: darkred; }
+.game-result.tie { background: orange; }
+.game-result.blackjack { background: gold; color: black; }
+
+.controls {
+    text-align: center;
+    padding: 15px;
+}
+
+.bet-buttons { margin-bottom: 10px; }
